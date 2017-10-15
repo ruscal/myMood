@@ -1,0 +1,31 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPad.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyMood.Services/MyMoodService.cs">
+    <Files>
+      <File FileName="MyMood/Classes/Resources.cs" Line="31" Column="25" />
+      <File FileName="MyMood/Screens/IntroductionViewController.cs" Line="58" Column="3" />
+      <File FileName="MyMood/Screens/MyMoodViewController.cs" Line="249" Column="1" />
+      <File FileName="MyMood/Main.cs" Line="15" Column="4" />
+      <File FileName="MyMood/Screens/SetLocationViewController.cs" Line="143" Column="55" />
+      <File FileName="MyMood/Screens/SetMyMoodViewController.cs" Line="304" Column="4" />
+      <File FileName="MyMood/Classes/OutstandingPromptsView.cs" Line="175" Column="7" />
+      <File FileName="MyMood.DL/MyMoodDbContext.cs" Line="51" Column="3" />
+      <File FileName="MyMood.Services/MyMoodService.cs" Line="487" Column="1" />
+      <File FileName="MyMood/Screens/SupportPopupViewController.cs" Line="19" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/russellhoskings/Kiln/My Mood/App/OurMood.Touch/Classes/ReportManager.cs" line="225" column="1" />
+      <Breakpoint file="/Users/russellhoskings/Kiln/My Mood/App/OurMood.Touch/Classes/ReportManager.cs" line="196" column="1" />
+      <Breakpoint file="/Users/russellhoskings/Kiln/My Mood/App/MyMood.Services/MyMoodService.cs" line="108" column="1" />
+      <Breakpoint file="/Users/russellhoskings/Kiln/My Mood/App/OurMood.Touch/Main.cs" line="28" column="1" />
+      <Breakpoint file="/Users/russellhoskings/Kiln/My Mood/App/OurMood.Touch/Classes/ReportManager.cs" line="104" column="1" />
+      <Breakpoint file="/Users/russellhoskings/Kiln/My Mood/App/MyMood/Screens/IntroductionViewController.cs" line="74" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.OurMood.Touch>
+    <ProfileHeapShotSettings_27CDebug Output="/var/folders/qb/7617h8qd61n6p1v_xmztl5lh0000gn/T/profiler-output.mlpd" Zip="True" HeapshotMode="ondemand" HeapshotGCInterval="1" HeapshotTimeInterval="1000" Calls="False" Alloc="False" CallDepth="100" StatisticalSampling="True" SampingFrequency="1000" MaxFrames="8" Mode="Memory" />
+  </MonoDevelop.Ide.ItemProperties.OurMood.Touch>
+</Properties>

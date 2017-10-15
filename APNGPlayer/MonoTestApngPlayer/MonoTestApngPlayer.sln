@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoTestApngPlayer", "MonoTestApngPlayer\MonoTestApngPlayer.csproj", "{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApngPlayerBinding", "..\ApngPlayerBinding\ApngPlayerBinding\ApngPlayerBinding.csproj", "{354019EC-3E51-4E72-93E6-63C342410189}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{354019EC-3E51-4E72-93E6-63C342410189}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.Release|iPhone.Build.0 = Release|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{354019EC-3E51-4E72-93E6-63C342410189}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Debug|iPhone.Build.0 = Debug|iPhone
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Release|iPhone.ActiveCfg = Release|iPhone
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Release|iPhone.Build.0 = Release|iPhone
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{8BCE427B-7C8D-48A6-8A71-3ACB94A33F14}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MonoTestApngPlayer\MonoTestApngPlayer.csproj
+	EndGlobalSection
+EndGlobal

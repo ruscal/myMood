@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7F441B7-CE10-417E-A49C-98D51D5A11AC}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyMood</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MyMood</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Developer: Russell Hoskings (645Y6QBR3N)</CodesignKey>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+    <IpaPackageName />
+    <CodesignProvision>50907B4E-CD5E-4FB7-BCFA-92FEB53A1078</CodesignProvision>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Distribution: Discover Corporation Ltd</CodesignKey>
+    <IpaPackageName />
+    <BuildIpa>True</BuildIpa>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <BuildIpa>True</BuildIpa>
+    <CodesignKey>iPhone Distribution: Discover Corporation Ltd</CodesignKey>
+    <IpaPackageName />
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+    <CodesignProvision>96DFDC8A-520A-4310-A5BF-D5FA53861412</CodesignProvision>
+    <IpaMetadata>Info.plist</IpaMetadata>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="Vici.CoolStorage.MT">
+      <HintPath>..\AddIns\Vici\Vici.CoolStorage.MT.dll</HintPath>
+    </Reference>
+    <Reference Include="Vici.Core.MT">
+      <HintPath>..\AddIns\Vici\Vici.Core.MT.dll</HintPath>
+    </Reference>
+    <Reference Include="ApngPlayerBinding">
+      <HintPath>..\..\..\Users\jonathan\Projects\ApngPlayerBinding\ApngPlayerBinding\bin\Debug\ApngPlayerBinding.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Screens\SetMyMoodViewController.cs" />
+    <Compile Include="Screens\SetMyMoodViewController.designer.cs">
+      <DependentUpon>SetMyMoodViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FeedbackViewController.cs" />
+    <Compile Include="Screens\FeedbackViewController.designer.cs">
+      <DependentUpon>FeedbackViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\GlobalMoodViewController.cs" />
+    <Compile Include="Screens\GlobalMoodViewController.designer.cs">
+      <DependentUpon>GlobalMoodViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\IntroductionViewController.cs" />
+    <Compile Include="Screens\IntroductionViewController.designer.cs">
+      <DependentUpon>IntroductionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\MyMoodViewController.cs" />
+    <Compile Include="Screens\MyMoodViewController.designer.cs">
+      <DependentUpon>MyMoodViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ReportsViewController.cs" />
+    <Compile Include="Spline.cs" />
+    <Compile Include="AL\MoodResponseTableSource.cs" />
+    <Compile Include="Screens\MyMoodHistoryViewController.cs" />
+    <Compile Include="AL\MyMoodSetEventArgs.cs" />
+    <Compile Include="Screens\HomeViewController.cs" />
+    <Compile Include="Screens\HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+<<<<<<< local
+    <Compile Include="Classes\Resources.cs" />
+=======
+    <Compile Include="NotificationManager.cs" />
+    <Compile Include="AL\MoodPromptTableSource.cs" />
+>>>>>>> other
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Screens\SetMyMoodViewController.xib" />
+    <InterfaceDefinition Include="Screens\FeedbackViewController.xib" />
+    <InterfaceDefinition Include="Screens\GlobalMoodViewController.xib" />
+    <InterfaceDefinition Include="Screens\IntroductionViewController.xib" />
+    <InterfaceDefinition Include="Screens\MyMoodViewController.xib" />
+    <InterfaceDefinition Include="Screens\HomeViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\first.png" />
+    <BundleResource Include="Resources\first%402x.png" />
+    <BundleResource Include="Resources\second.png" />
+    <BundleResource Include="Resources\second%402x.png" />
+    <BundleResource Include="Resources\feedback.png" />
+    <BundleResource Include="Resources\setMyMood.png" />
+    <BundleResource Include="Resources\myMood.png" />
+    <BundleResource Include="Resources\globalMood.png" />
+    <BundleResource Include="Resources\reports.png" />
+    <BundleResource Include="Resources\introduction.png" />
+    <BundleResource Include="Resources\history.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\dancer1.mp4" />
+    <BundleResource Include="Resources\dancer\Sequence 01000.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01001.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01002.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01003.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01004.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01005.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01006.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01007.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01008.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01009.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01010.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01011.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01012.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01013.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01014.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01015.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01016.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01017.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01018.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01019.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01020.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01021.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01022.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01023.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01024.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01025.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01026.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01027.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01028.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01029.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01030.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01031.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01032.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01033.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01034.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01035.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01036.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01037.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01038.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01039.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01040.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01041.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01042.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01043.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01044.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01045.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01046.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01047.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01048.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01049.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01050.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01051.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01052.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01053.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01054.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01055.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01056.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01057.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01058.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01059.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01060.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01061.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01062.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01063.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01064.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01065.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01066.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01067.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01068.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01069.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01070.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01071.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01072.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01073.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01074.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01075.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01076.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01077.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01078.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01079.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01080.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01081.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01082.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01083.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01084.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01085.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01086.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01087.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01088.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01089.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01090.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01091.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01092.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01093.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01094.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01095.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01096.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01097.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01098.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01099.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01100.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01101.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01102.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01103.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01104.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01105.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01106.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01107.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01108.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01109.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01110.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01111.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01112.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01113.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01114.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01115.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01116.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01117.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01118.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01119.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01120.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01121.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01122.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01123.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01124.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01125.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01126.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01127.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01128.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01129.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01130.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01131.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01132.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01133.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01134.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01135.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01136.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01137.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01138.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01139.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01140.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01141.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01142.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01143.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01144.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01145.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01146.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01147.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01148.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01149.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01150.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01151.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01152.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01153.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01154.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01155.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01156.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01157.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01158.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01159.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01160.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01161.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01162.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01163.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01164.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01165.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01166.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01167.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01168.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01169.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01170.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01171.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01172.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01173.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01174.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01175.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01176.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01177.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01178.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01179.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01180.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01181.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01182.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01183.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01184.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01185.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01186.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01187.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01188.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01189.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01190.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01191.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01192.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01193.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01194.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01195.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01196.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01197.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01198.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01199.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01200.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01201.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01202.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01203.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01204.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01205.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01206.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01207.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01208.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01209.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01210.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01211.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01212.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01213.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01214.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01215.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01216.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01217.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01218.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01219.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01220.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01221.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01222.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01223.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01224.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01225.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01226.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01227.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01228.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01229.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01230.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01231.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01232.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01233.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01234.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01235.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01236.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01237.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01238.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01239.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01240.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01241.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01242.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01243.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01244.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01245.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01246.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01247.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01248.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01249.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01250.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01251.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01252.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01253.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01254.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01255.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01256.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01257.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01258.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01259.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01260.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01261.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01262.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01263.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01264.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01265.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01266.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01267.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01268.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01269.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01270.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01271.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01272.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01273.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01274.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01275.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01276.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01277.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01278.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01279.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01280.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01281.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01282.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01283.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01284.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01285.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01286.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01287.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01288.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01289.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01290.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01291.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01292.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01293.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01294.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01295.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01296.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01297.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01298.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01299.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01300.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01301.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01302.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01303.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01304.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01305.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01306.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01307.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01308.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01309.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01310.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01311.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01312.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01313.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01314.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01315.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01316.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01317.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01318.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01319.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01320.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01321.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01322.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01323.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01324.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01325.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01326.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01327.png" />
+    <BundleResource Include="Resources\dancer\Sequence 01328.png" />
+    <BundleResource Include="Resources\BG-v0.7.png" />
+    <BundleResource Include="Resources\BG-v0.8.png" />
+    <BundleResource Include="Resources\BG_Neutral_Nav.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\CONFIRM.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Screens\" />
+    <Folder Include="AL\" />
+    <Folder Include="Resources\Buttons\" />
+    <Folder Include="Images\" />
+    <Folder Include="Classes\" />
+    <Folder Include="Images\Nodes\" />
+    <Folder Include="Images\Buttons\" />
+    <Folder Include="Images\Backgrounds\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Discover.Core\Discover.Core.csproj">
+      <Project>{01239074-7907-4F4B-94EA-66680CDE4715}</Project>
+      <Name>Discover.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyMood.DL\MyMood.DL.csproj">
+      <Project>{39530AEC-4426-40C6-B6C4-BB702BF4A1C3}</Project>
+      <Name>MyMood.DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyMood.Services\MyMood.Services.csproj">
+      <Project>{017EBCD3-3E08-4B0F-9758-A670D7AB6581}</Project>
+      <Name>MyMood.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Nodes\NodeBored.png" />
+    <Content Include="Images\Nodes\NodeDeflated.png" />
+    <Content Include="Images\Nodes\NodeDisengaged.png" />
+    <Content Include="Images\Nodes\NodeEngaged.png" />
+    <Content Include="Images\Nodes\NodeExcited.png" />
+    <Content Include="Images\Nodes\NodeFrustrated.png" />
+    <Content Include="Images\Nodes\NodeLarge.png" />
+    <Content Include="Images\Nodes\NodeLargeDark.png" />
+    <Content Include="Images\Nodes\NodeOff.png" />
+    <Content Include="Images\Nodes\NodePassionate.png" />
+    <Content Include="Images\Nodes\NodeProud.png" />
+    <Content Include="Images\Nodes\NodeWorried.png" />
+    <Content Include="Images\Nodes\NodeOptimistic.png" />
+    <Content Include="Images\Backgrounds\BG_Bored.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Deflated.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Disengaged.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Engaged.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Excited.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Frustrated.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Neutral.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Passionate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Optimistic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Proud.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Backgrounds\BG_Worried.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Buttons\Info.png" />
+    <Content Include="Images\Backgrounds\IntroOverlay.png" />
+    <Content Include="Images\Buttons\SetYourMood_hit.png" />
+    <Content Include="Images\Buttons\SetYourMood.png" />
+    <Content Include="Images\Backgrounds\SelectionHelpOverlay.png" />
+    <Content Include="Images\Backgrounds\SelectionHelpOverlayV2.png" />
+  </ItemGroup>
+</Project>

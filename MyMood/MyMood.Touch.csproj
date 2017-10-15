@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7F441B7-CE10-417E-A49C-98D51D5A11AC}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyMood</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MyMood</AssemblyName>
+    <ReleaseVersion>1.1</ReleaseVersion>
+    <SynchReleaseVersion>False</SynchReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Developer: Russell Hoskings (645Y6QBR3N)</CodesignKey>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+    <CodesignProvision>9910233A-781B-4FE1-A84B-24792B035E02</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Distribution: Discover Corporation Ltd</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <BuildIpa>True</BuildIpa>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+    <CodesignProvision>A631FB1A-FE5E-40A8-9190-8CCBABD7EDAB</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <BuildIpa>True</BuildIpa>
+    <CodesignKey>iPhone Distribution: Discover Corporation Ltd</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+    <CodesignProvision>0B8B1AD5-BE9D-4813-BB3D-253A03EE5519</CodesignProvision>
+    <IpaMetadata>Info.plist</IpaMetadata>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>1A4A7DB1-ABC8-4968-8E38-DE0DB7B1AFEE</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\AddIns\Json45r10\Bin\Portable\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Screens\SetMyMoodViewController.cs" />
+    <Compile Include="Screens\SetMyMoodViewController.designer.cs">
+      <DependentUpon>SetMyMoodViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\MyMoodViewController.cs" />
+    <Compile Include="Screens\MyMoodViewController.designer.cs">
+      <DependentUpon>MyMoodViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AL\MoodResponseTableSource.cs" />
+    <Compile Include="AL\MyMoodSetEventArgs.cs" />
+    <Compile Include="Classes\Resources.cs" />
+    <Compile Include="Classes\HorizontalTableView.cs" />
+    <Compile Include="Classes\NotificationManager.cs" />
+    <Compile Include="Screens\SetLocationViewController.cs" />
+    <Compile Include="Screens\SetLocationViewController.designer.cs">
+      <DependentUpon>SetLocationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\TimeLineTableView.cs" />
+    <Compile Include="Classes\DayMarkerColumnView.cs" />
+    <Compile Include="Classes\MoodResponseColumnView.cs" />
+    <Compile Include="Classes\EmptyColumnView.cs" />
+    <Compile Include="Classes\AddResponseColumnView.cs" />
+    <Compile Include="Classes\MoodPromptColumnView.cs" />
+    <Compile Include="Classes\TimelineColumnView.cs" />
+    <Compile Include="AL\AddNewResponseEventArgs.cs" />
+    <Compile Include="Classes\OutstandingPromptsView.cs" />
+    <Compile Include="AL\JumpToPromptEventArgs.cs" />
+    <Compile Include="Classes\MoodHelpOverlayView.cs" />
+    <Compile Include="Classes\SelectMoodHelpOverlayView.cs" />
+    <Compile Include="Screens\IntroductionViewController.cs" />
+    <Compile Include="Screens\IntroductionViewController.designer.cs">
+      <DependentUpon>IntroductionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\SyncStatusButtonView.cs" />
+    <Compile Include="Screens\SupportViewController.cs" />
+    <Compile Include="Screens\SupportViewController.designer.cs">
+      <DependentUpon>SupportViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AL\LogTableSource.cs" />
+    <Compile Include="AL\MoodPromptTableSource.cs" />
+    <Compile Include="AL\NotificationTableSource.cs" />
+    <Compile Include="Classes\RegisterInterestDialogView.cs" />
+    <Compile Include="Classes\RequestReportDialogView.cs" />
+    <Compile Include="Classes\DialogBaseView.cs" />
+    <Compile Include="Screens\UpdateRequiredViewController.cs" />
+    <Compile Include="Screens\UpdateRequiredViewController.designer.cs">
+      <DependentUpon>UpdateRequiredViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SupportPopupViewController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Screens\SetMyMoodViewController.xib" />
+    <InterfaceDefinition Include="Screens\MyMoodViewController.xib" />
+    <InterfaceDefinition Include="Resources\ColumnView.xib" />
+    <InterfaceDefinition Include="Screens\SetLocationViewController.xib" />
+    <InterfaceDefinition Include="Screens\IntroductionViewController.xib" />
+    <InterfaceDefinition Include="Screens\SupportViewController.xib" />
+    <InterfaceDefinition Include="Screens\UpdateRequiredViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CONFIRM.png" />
+    <BundleResource Include="Resources\AppIcon.png" />
+    <BundleResource Include="Resources\AppIcon72x72.png" />
+    <BundleResource Include="Resources\Cancel-button.png" />
+    <BundleResource Include="Resources\Help-button.png" />
+    <BundleResource Include="Resources\ReportButton.png" />
+    <BundleResource Include="Images\Backgrounds\ReportRequestOverlay.png" />
+    <BundleResource Include="Images\Buttons\ReportRequestCancel.png" />
+    <BundleResource Include="Images\Buttons\ReportRequestSubmit.png" />
+    <BundleResource Include="Resources\RegisterInterest.png" />
+    <BundleResource Include="Resources\RegionScreen.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\GenericBG.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OptionBlank.png" />
+    <BundleResource Include="Images\Buttons\OptionSelected.png" />
+    <BundleResource Include="Images\Buttons\OptionUnselected.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\TimelineBG.png" />
+    <BundleResource Include="Resources\Update-Required.png" />
+    <BundleResource Include="Resources\BlackButton.png" />
+    <BundleResource Include="Resources\BlackBtn.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Screens\" />
+    <Folder Include="AL\" />
+    <Folder Include="Images\" />
+    <Folder Include="Classes\" />
+    <Folder Include="Images\Buttons\" />
+    <Folder Include="Images\Backgrounds\" />
+    <Folder Include="Images\TimeLine\" />
+    <Folder Include="Images\Characters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Discover.Core\Discover.Core.csproj">
+      <Project>{01239074-7907-4F4B-94EA-66680CDE4715}</Project>
+      <Name>Discover.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyMood.DL\MyMood.DL.csproj">
+      <Project>{39530AEC-4426-40C6-B6C4-BB702BF4A1C3}</Project>
+      <Name>MyMood.DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyMood.Services\MyMood.Services.csproj">
+      <Project>{017EBCD3-3E08-4B0F-9758-A670D7AB6581}</Project>
+      <Name>MyMood.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APNGPlayer\ApngPlayerBinding\ApngPlayerBinding\ApngPlayerBinding.csproj">
+      <Project>{354019EC-3E51-4E72-93E6-63C342410189}</Project>
+      <Name>ApngPlayerBinding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vici\library\Library\Vici.CoolStorage.MonoTouch.csproj">
+      <Project>{9ECBEDAE-3C30-48D5-8282-E32571E436F4}</Project>
+      <Name>Vici.CoolStorage.MonoTouch</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Buttons\Info.png" />
+    <Content Include="Images\Buttons\SetYourMood_hit.png" />
+    <Content Include="Images\Buttons\SetYourMood.png" />
+    <Content Include="Root.plist" />
+    <Content Include="Images\Backgrounds\Bored.png" />
+    <Content Include="Images\Backgrounds\Deflated.png" />
+    <Content Include="Images\Backgrounds\Disengaged.png" />
+    <Content Include="Images\Backgrounds\Engaged.png" />
+    <Content Include="Images\Backgrounds\Excited.png" />
+    <Content Include="Images\Backgrounds\Frustrated.png" />
+    <Content Include="Images\Backgrounds\Neutral.png" />
+    <Content Include="Images\Backgrounds\Optimistic.png" />
+    <Content Include="Images\Backgrounds\Passionate.png" />
+    <Content Include="Images\Backgrounds\Proud.png" />
+    <Content Include="Images\Backgrounds\Worried.png" />
+    <Content Include="Images\Backgrounds\TimelineHelpOverlay.png" />
+    <Content Include="Images\Buttons\close.png" />
+    <Content Include="Images\Buttons\NotificationPanel.png" />
+    <Content Include="Images\Buttons\SingleBadge.png" />
+    <Content Include="Images\Buttons\DoubleBadge.png" />
+    <Content Include="Images\TimeLine\Add-New-Node.png" />
+    <Content Include="Images\TimeLine\Bored-Node.png" />
+    <Content Include="Images\TimeLine\Day-1-Node.png" />
+    <Content Include="Images\TimeLine\Day-2-Node.png" />
+    <Content Include="Images\TimeLine\Deflated-Node.png" />
+    <Content Include="Images\TimeLine\Disengaged-Node.png" />
+    <Content Include="Images\TimeLine\Empty-Node.png" />
+    <Content Include="Images\TimeLine\Engaged-Node.png" />
+    <Content Include="Images\TimeLine\Excited-Node.png" />
+    <Content Include="Images\TimeLine\Frustrated-Node.png" />
+    <Content Include="Images\TimeLine\Optimistic-Node.png" />
+    <Content Include="Images\TimeLine\Passionate-Node.png" />
+    <Content Include="Images\TimeLine\Prompted-Node.png" />
+    <Content Include="Images\TimeLine\Proud-Node.png" />
+    <Content Include="Images\TimeLine\Worried-Node.png" />
+    <Content Include="Images\Characters\Bored.png" />
+    <Content Include="Images\Characters\Deflated.png" />
+    <Content Include="Images\Characters\Disengaged.png" />
+    <Content Include="Images\Characters\Engaged.png" />
+    <Content Include="Images\Characters\Excited.png" />
+    <Content Include="Images\Characters\Frustrated.png" />
+    <Content Include="Images\Characters\Neutral.png" />
+    <Content Include="Images\Characters\Optimistic.png" />
+    <Content Include="Images\Characters\Passionate.png" />
+    <Content Include="Images\Characters\Proud.png" />
+    <Content Include="Images\Characters\Worried.png" />
+    <Content Include="Images\Backgrounds\InterestRequestOverlay.png" />
+    <Content Include="Images\Buttons\SyncIcon-Amber.png" />
+    <Content Include="Images\Buttons\SyncIcon-Green.png" />
+    <Content Include="Images\Buttons\SyncIcon-Grey.png" />
+    <Content Include="Images\Buttons\SyncIcon-Purple.png" />
+    <Content Include="Images\Buttons\AddMoodBtn.png" />
+    <Content Include="Images\Buttons\BlackButton.png" />
+    <Content Include="Images\Buttons\RedButton.png" />
+    <Content Include="Images\Backgrounds\RegisterInterestPanel.png" />
+    <Content Include="Images\Backgrounds\ReportRequestPanel.png" />
+    <Content Include="Images\Backgrounds\IntroBackground.png" />
+    <Content Include="Images\Buttons\Action_Button.png" />
+    <Content Include="Images\Backgrounds\IntroScreen.png" />
+    <Content Include="Images\Backgrounds\InfoScreen.png" />
+    <Content Include="Images\Backgrounds\SelectMoodHelpBackground.png" />
+    <Content Include="Images\Backgrounds\SelectMoodHelpBackground2.png" />
+    <Content Include="Images\Backgrounds\Update-Available.png" />
+    <Content Include="Images\Backgrounds\Update-Required.png" />
+    <Content Include="Images\Buttons\BlackBtn.png" />
+  </ItemGroup>
+</Project>

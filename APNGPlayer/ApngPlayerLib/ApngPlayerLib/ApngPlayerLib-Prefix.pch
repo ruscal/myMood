@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ApngPlayerLib' target in the 'ApngPlayerLib' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
